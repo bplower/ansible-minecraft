@@ -1,3 +1,4 @@
+---
 # The only way to generate a server.properties file is to start Minecraft.
 # We send the stop command to the stdin to stop the server right after it
 # starts.
@@ -6,7 +7,7 @@
   args:
     creates: server.properties
     chdir: "{{ minecraft_home }}"
-  become: yes
+  become: "yes"
   become_user: "{{ minecraft_user }}"
 
 - name: update server.properties

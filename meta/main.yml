@@ -7,14 +7,14 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-      - trusty
-      - xenial
+        - trusty
+        - xenial
     - name: Debian
       versions:
-      - jessie
+        - jessie
     - name: EL
       versions:
         - 7
   categories:
-  - system
+    - system
 dependencies: []

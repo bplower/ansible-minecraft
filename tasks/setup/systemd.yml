@@ -20,6 +20,8 @@
   command: systemctl daemon-reload
   become: true
   when: systemd_service_config.changed
+  tags:
+    - skip_ansible_lint
 
 - name: configure console directory
   template:

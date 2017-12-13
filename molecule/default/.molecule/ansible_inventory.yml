@@ -1,0 +1,17 @@
+# Molecule managed
+
+---
+all:
+  hosts:
+    centos: &id001
+      ansible_connection: docker
+    debian: &id002
+      ansible_connection: docker
+    ubuntu: &id003
+      ansible_connection: docker
+ungrouped:
+  hosts:
+    centos: *id001
+    debian: *id002
+    ubuntu: *id003
+  vars: {}
