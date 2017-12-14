@@ -18,8 +18,10 @@ env:
     - OS=centos7  SERVER=spigot    PROCESS_CONTROL=systemd
 before_install:
   - sudo -E ./scripts/install-docker.sh
-install: true
+install:
+  - pip install tox-travis
 script:
+  - tox
   - make "${OS}" test
 notifications:
   email: false
