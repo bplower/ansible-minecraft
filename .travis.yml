@@ -1,5 +1,8 @@
 ---
-language: generic
+language: python
+python:
+  - "2.7"
+  - "3.5"
 sudo: required
 services:
   - docker
@@ -19,10 +22,10 @@ env:
 before_install:
   - sudo -E ./scripts/install-docker.sh
 install:
-  - pip install tox-travis
+  - sudo pip install tox-travis
 script:
   - tox
   - make "${OS}" test
 notifications:
   email: false
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  #webhooks: https://galaxy.ansible.com/api/v1/notifications/
